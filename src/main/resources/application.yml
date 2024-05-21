@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: springapp1
+  profiles:
+    active: dev
+  security:
+    enabled: false
+  config:
+    import: optional:configserver:http://configuser:configpass@localhost:8888?fail-fast=true&max-attempts=10&max-interval=1500&multiplier=1.2&initial-interval=1100
+
+app:
+  message: "Hello Local Environment"
+
